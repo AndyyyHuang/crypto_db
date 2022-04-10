@@ -28,8 +28,8 @@ def binance_transaction_scraper(base_token:str, quote_token:str, start_date:str,
 
     proxies = {'http': 'http://127.0.0.1:1086',
                'https': 'http://127.0.0.1:1086'}
-    client = Client(api_key="8YbN0qDgaPhYQCQjW8v2v3JOWNHoTjOZgLkXsF1MeT3BY4Lu1TzVrPCd3SQRSBuf",
-                    api_secret="GNStPoGYiM5fb03fJUx0uSnltJUK8IPTF8f8nk1LcHl6mqsVHDuEs9AIO0GWHUCe",
+    client = Client(api_key="",
+                    api_secret="",
                     requests_params={'proxies': proxies})
     mongo = my_mongo(host='127.0.0.1', port=27017)
 
@@ -135,8 +135,8 @@ def fill_missing_data(base_token: str, quote_token: str, interval: str):
     symbol = base_token + quote_token
     proxies = {'http': 'http://127.0.0.1:1086',
                'https': 'http://127.0.0.1:1086'}
-    client = Client(api_key="8YbN0qDgaPhYQCQjW8v2v3JOWNHoTjOZgLkXsF1MeT3BY4Lu1TzVrPCd3SQRSBuf",
-                    api_secret="GNStPoGYiM5fb03fJUx0uSnltJUK8IPTF8f8nk1LcHl6mqsVHDuEs9AIO0GWHUCe",
+    client = Client(api_key="",
+                    api_secret="",
                     requests_params={'proxies': proxies})
     mongo = my_mongo(host='127.0.0.1', port=27017)
     date_lis = mongo.col_to_df(db_name='cex_trade', col_name='binance_kline_data',
